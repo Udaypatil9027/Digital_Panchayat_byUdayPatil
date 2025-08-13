@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Citizen Login - DigiPanchayat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --saffron: #FF9933;
+      --white: #FFFFFF;
+      --green: #138808;
+      --dark-green: #007B5E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: linear-gradient(-45deg, var(--saffron), var(--white), var(--green));
+      background-size: 400% 400%;
+      animation: bgWave 14s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes bgWave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px 0;
+      border-bottom: 3px solid #ccc;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header img {
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 26px;
+      vertical-align: middle;
+      background: linear-gradient(to right, var(--saffron), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .login-container {
+      margin-top: 80px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      max-width: 450px;
+      width: 90%;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: var(--dark-green);
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: var(--dark-green);
+      box-shadow: 0 0 5px rgba(0, 123, 94, 0.3);
+    }
+
+    input[type="submit"] {
+      background-color: var(--dark-green);
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005c44;
+      transform: translateY(-2px);
+    }
+
+    .home-btn {
+      margin-top: 12px;
+      display: inline-block;
+      text-align: center;
+      padding: 12px;
+      background-color: #6c757d;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .home-btn:hover {
+      background-color: #5a6268;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: auto;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 20px;
+      }
+
+      .login-container {
+        margin-top: 70px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Ashoka_Chakra.svg/120px-Ashoka_Chakra.svg.png" alt="Emblem">
+    <h1>DigiPanchayat - Local Governance Portal</h1>
+  </header>
+
+  <div class="login-container">
+    <h2>Citizen Login</h2>
+    <form action="CitizenLogin22" method="post">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+
+      <input type="submit" value="Login">
+      <a href="index.html" class="home-btn">Back to Home</a>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 DigiPanchayat | Designed for Local Governance Empowerment 🇮🇳
+  </footer>
+
+</body>
+</html>

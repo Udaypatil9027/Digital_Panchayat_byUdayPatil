@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Officer Error - DigiPanchayat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --green: #138808;
+            --dark-green: #007B5E;
+            --danger: #dc3545;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+            background-size: 300% 100%;
+            animation: flagWave 12s ease infinite;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        @keyframes flagWave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .error-box {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--danger);
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 12px 20px;
+            font-size: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005c44;
+        }
+    </style>
+</head>
+<body>
+
+<div class="error-box">
+    <h3>❌ Failed to add officer. Officer may already exist.</h3>
+    <a href="AdminAddOfficer11.html" class="btn">← Back to Add Officer</a>
+</div>
+
+</body>
+</html>

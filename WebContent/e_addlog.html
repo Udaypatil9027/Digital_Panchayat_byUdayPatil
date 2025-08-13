@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Error - DigiPanchayat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --green: #138808;
+            --dark-green: #007B5E;
+            --danger: #dc3545;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+            background-size: 300% 100%;
+            animation: flagWave 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes flagWave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .error-box {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            color: var(--danger);
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--dark-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005c44;
+        }
+    </style>
+</head>
+<body>
+
+<div class="error-box">
+    <h2>❌ Admin Credentials are Incorrect!</h2>
+    <p>Please check your username and password.</p>
+    <a href="AdminLogin11.html" class="btn">← Back to Login</a>
+</div>
+
+</body>
+</html>

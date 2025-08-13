@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Officer Dashboard - DigiPanchayat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --green: #138808;
+            --dark-green: #007B5E;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+            background-size: 300% 100%;
+            animation: flagWave 12s ease infinite;
+        }
+
+        @keyframes flagWave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: var(--dark-green);
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+
+        .sidebar a {
+            display: block;
+            background-color: #0f6a4f;
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #0a5a41;
+        }
+
+        .main {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .main h1 {
+            font-size: 26px;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .main p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+
+            .sidebar a {
+                margin: 10px auto;
+                width: 90%;
+            }
+
+            .main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Welcome Officer</h2>
+    
+    <a href="OfficerViewCitizen33.jsp">👥 View Citizens</a>
+    <a href="OfficerViewComplaints33.jsp">📄 View Complaints</a>
+    <a href="OfficerViewSchemesAndNotices33.jsp">📢 Schemes & Notices</a>
+    <a href="PasswordResetOfficer33.jsp">🔒 Reset Password</a>
+    <a href="index.html">🚪 Logout</a>
+</div>
+
+<div class="main">
+    <h1>DigiPanchayat Officer Dashboard</h1>
+    <p>Use the options in the sidebar to manage complaints, view citizen data, and monitor schemes & notices.</p>
+</div>
+
+</body>
+</html>

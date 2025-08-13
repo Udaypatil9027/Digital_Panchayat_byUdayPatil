@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Panchayat | Local Government Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --saffron: #FF9933;
+      --white: #FFFFFF;
+      --green: #138808;
+      --dark-green: #007B5E;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: linear-gradient(to right, 
+        var(--saffron) 33%, 
+        var(--white) 33% 66%, 
+        var(--green) 66%);
+      background-size: 300% 100%;
+      animation: flagWave 15s ease infinite;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes flagWave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #ccc;
+      backdrop-filter: blur(6px);
+    }
+
+    header img {
+      width: 60px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 28px;
+      vertical-align: middle;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      min-height: calc(100vh - 140px);
+    }
+
+    .sidebar {
+      width: 280px;
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 30px 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(5px);
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+      background-color: var(--dark-green);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 6px;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #005c44;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .welcome-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(4px);
+      max-width: 700px;
+      text-align: center;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .welcome-box h2 {
+      color: var(--dark-green);
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-box p {
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .flag-icon {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .digital-panchayat-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      background-color: #222;
+      padding: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        box-shadow: none;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .flag-icon {
+        width: 80px;
+      }
+
+      .digital-panchayat-img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+  <h1>Digital Panchayat - Local Governance Portal</h1>
+  </header>
+
+  <div class="main">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="AdminLogin11.html" class="btn">Admin Login</a>
+      <a href="CitizenRegister22.html" class="btn">Citizen Registration</a>
+      <a href="CitizenLogin22.html" class="btn">Citizen Login</a>
+      <a href="OfficerLogin33.html" class="btn">Panchayat Officer Login</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="welcome-box">
+ <h2>Welcome to DigiPanchayat</h2>
+  <p>Your gateway to local government services. Please use the left menu to access your role.</p>
+
+  <!-- Updated Image -->
+  <img src="https://www.digitalindiagov.in/wp-content/uploads/2022/12/images222222222.webp" alt="Digital India Banner" class="digital-panchayat-img">
+</div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 DigiPanchayat By ~ Uday Patil | Designed for Local Governance Empowerment .🇮🇳
+  </footer>
+
+</body>
+</html>

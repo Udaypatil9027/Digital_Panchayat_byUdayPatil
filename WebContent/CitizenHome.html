@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Citizen Home - DigiPanchayat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --green: #138808;
+            --dark-green: #007B5E;
+            --white: #fff;
+            --shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+            background-size: 300% 100%;
+            animation: flagWave 15s ease infinite;
+        }
+
+        @keyframes flagWave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: var(--dark-green);
+            padding: 40px 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: #e6e6e6;
+        }
+
+        .sidebar form, .sidebar a {
+            width: 100%;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 15px;
+            color: white;
+            background-color: #1ca87f;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #128766;
+        }
+
+        .logout-btn {
+            background-color: #dc3545;
+        }
+
+        .logout-btn:hover {
+            background-color: #b52a35;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px;
+            overflow-y: auto;
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            color: #333;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Hello, Welcome to Citizen Dashboard!!</h2>
+        <p>Choose an option to proceed:</p>
+
+        <form action="CitizenCmoplaint22.jsp" method="get">
+            <input type="hidden" name="email" value="<%= email %>">
+            <button type="submit" class="btn">Submit Complaint</button>
+        </form>
+
+        <form action="CitizenViewSN22.jsp" method="get">
+            <button type="submit" class="btn">View Schemes & Notices</button>
+        </form>
+
+        <form action="CitizenResetPassword22.jsp" method="get">
+            <input type="hidden" name="email" value="<%= email %>">
+            <button type="submit" class="btn">Change Password</button>
+        </form>
+
+        <a href="CitizenYourComplaints22.jsp" class="btn">View Your Complaints</a>
+        <a href="index.html" class="btn logout-btn">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome to DigiPanchayat Portal</h1>
+        <p>
+            The DigiPanchayat platform allows you to conveniently access all your civic services. 
+            You can register your grievances, view government schemes and notices, and track your submissions. 
+            For any issue, please contact your Panchayat Office.
+        </p>
+    </div>
+
+</body>
+</html>

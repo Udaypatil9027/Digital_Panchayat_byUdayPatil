@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Admin Home - DigiPanchayat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --white: #FFFFFF;
+            --green: #138808;
+            --dark-green: #007B5E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+            background-size: 300% 100%;
+            animation: flagWave 18s ease infinite;
+        }
+
+        @keyframes flagWave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background: var(--dark-green);
+            color: white;
+            padding: 20px 0;
+            height: 100vh;
+            position: fixed;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .sidebar-header img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            color: white;
+        }
+
+        .nav-links {
+            padding: 20px;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .nav-links a.logout {
+            background: #dc3545;
+            margin-top: 20px;
+        }
+
+        .nav-links a.logout:hover {
+            background: #c82333;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #007B5E;
+            font-size: 24px;
+        }
+
+        .admin-image-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .admin-image {
+            max-width: 400px;
+            width: 600%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .welcome-message {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .welcome-message h2 {
+            color: #007B5E;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                margin: 5px;
+                padding: 10px 15px;
+            }
+
+            .admin-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Ashoka_Chakra.svg/120px-Ashoka_Chakra.svg.png" alt="Emblem">
+            <h2>Admin Dashboard</h2>
+        </div>
+        
+        <div class="nav-links">
+            <a href="AdminAddOfficer11.html">Add Officer</a>
+            <a href="AdminViewOfficer11.jsp">View Officers</a>
+            <a href="AdminViewCitizen11.jsp">View Citizens</a>
+            <a href="AdminSchemes11.html">Manage Schemes</a>
+            <a href="AdminNotices11.html">Manage Notices</a>
+            <a href="AdminViewSN.jsp">View Published Content</a>
+            <a href="index.html" class="logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Admin Home Page</h1>
+        </div>
+        
+        <div class="admin-image-container">
+            <img src="https://assets.thehansindia.com/h-upload/2020/07/22/985617-public-administration.webp" 
+                 alt="Public Administration" class="admin-image">
+        </div>
+        
+        <div class="welcome-message">
+            <h2>Welcome to Admin Panel</h2>
+            <p>This is your central dashboard for managing all aspects of the DigiPanchayat system. From here you can add new officers, view existing officers and citizens, manage government schemes and notices, and review all published content. Use the sidebar navigation to access different administrative functions.</p>
+        </div>
+    </div>
+</body>
+</html>

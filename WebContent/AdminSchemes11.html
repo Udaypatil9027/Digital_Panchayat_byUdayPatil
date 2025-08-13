@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Add New Scheme - DigiPanchayat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --saffron: #FF9933;
+      --white: #FFFFFF;
+      --green: #138808;
+      --dark-green: #007B5E;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(-45deg, var(--saffron), var(--white), var(--green));
+      background-size: 300% 300%;
+      animation: bgSlide 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    @keyframes bgSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .scheme-container {
+      background-color: var(--white);
+      max-width: 750px;
+      width: 100%;
+      padding: 40px 35px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .scheme-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(to right, var(--saffron), var(--green));
+    }
+
+    h2 {
+      color: var(--dark-green);
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--saffron), var(--green));
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background-color: #fafafa;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg fill='gray' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--dark-green);
+      box-shadow: 0 0 0 3px rgba(0, 123, 94, 0.1);
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--dark-green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #005c44;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 123, 94, 0.2);
+    }
+
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5a6268;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .scheme-container {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scheme-container">
+    <h2>Add New Government Scheme</h2>
+    <form action="AdminSchemes11" method="post">
+      <div class="form-group">
+        <label for="title">Scheme Title:</label>
+        <input type="text" id="title" name="title" required placeholder="Enter scheme name">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Scheme Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select category</option>
+          <option value="agriculture">Agriculture</option>
+          <option value="education">Education</option>
+          <option value="health">Health</option>
+          <option value="housing">Housing</option>
+          <option value="employment">Employment</option>
+          <option value="women">Women Empowerment</option>
+          <option value="senior">Senior Citizens</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Scheme Description:</label>
+        <textarea id="description" name="description" required placeholder="Describe the scheme including benefits, eligibility, and how to apply..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="launchDate">Launch Date:</label>
+        <input type="date" id="launchDate" name="launchDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="officialLink">Official Link (if any):</label>
+        <input type="url" id="officialLink" name="officialLink" placeholder="https://example.gov.in/scheme">
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Publish Scheme</button>
+        <a href="AdminHome11.html" class="btn btn-secondary">Back to Dashboard</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
